@@ -21,7 +21,7 @@ password='senai%40134'
 database='db_sensor'
 certificado='DigiCertGlobalRootG2.crt.pem'
 
-uri = f"mysql://{username}:{password}@{server_name}:{port}/{database}"
+uri = f"mysql+pymysql://{username}:{password}@{server_name}:{port}/{database}"
 ssl_certificado = f"?ssl_ca={certificado}"
 
 app.config['SQLALCHEMY_DATABASE_URI'] = uri + ssl_certificado
