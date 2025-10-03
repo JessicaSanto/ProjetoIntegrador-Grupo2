@@ -526,9 +526,9 @@ def gera_resposta(status, nome_conteudo, conteudo, mensagem=False):
         body['mensagem'] = mensagem
     return Response(json.dumps(body), status=status, mimetype='application/json')
 
-# if __name__ == '__main__':
-#     with app.app_context():
-#         mydb.create_all()  # Cria as tabelas no banco de dados
+if __name__ == '__main__':
+    with app.app_context():
+        mydb.create_all()  # Cria as tabelas no banco de dados
     
 start_mqtt()
 app.run(port=5000, host='0.0.0.0', debug=True)
