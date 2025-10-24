@@ -34,7 +34,7 @@ mqtt_data = {}
 
 def on_connect(client, userdata, flags, rc, properties=None):
     print("Connected with result code " + str(rc))
-    client.subscribe("projeto_integrado/SENAI134/Cienciadedados/grupo2")
+    client.subscribe("projeto_integrado/SENAI134/Cienciadedados/grupo3")
 
 def on_message(client, userdata, msg):
     global mqtt_data
@@ -530,4 +530,4 @@ def gera_resposta(status, nome_conteudo, conteudo, mensagem=False):
 #     with app.app_context():
 #         mydb.create_all()
 start_mqtt()
-app.run(port=5000, host='0.0.0.0', debug=True)
+app.run(port=5002, host='0.0.0.0', debug=True)
